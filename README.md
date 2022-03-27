@@ -23,3 +23,14 @@ Using Python, React, Open cv , Open Vino
 <img src="snaps/1.png">
 <img src="snaps/2.png">
 <img src="snaps/3.png">
+
+# In depth view of Dashboard
+
+<img src="snaps/4.PNG">
+<img src="snaps/5.PNG">
+<img src="snaps/6.PNG">
+<img src="snaps/7.PNG">
+<img src="snaps/8.PNG">
+<img src="snaps/9.PNG">
+<img src="snaps/10.PNG">
+ 
