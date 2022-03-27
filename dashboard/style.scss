@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//  VARIABLES
+$primary-color: #00acc1;
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(165, 165, 165);
+    margin-bottom: 15px;
+  }
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: #f0eff5;
+
+  display: flex;
+
+  & > .left {
+    height: 100%;
+    width: 30%;
+
+    padding: 30px;
+
+    .cards-list {
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    .cards-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gender {
+      display: flex;
+      justify-content: space-between;
+
+      .info {
+        margin-top: 50px;
+
+        .d-flex {
+          margin-bottom: 13px;
+          margin-left: 30px;
+          font-size: 1.4rem;
+
+          i {
+            margin-right: 10px;
+            font-size: 1.9rem;
+          }
+
+          p {
+            font-weight: 500;
+          }
+
+          .fa-female {
+            color: rgb(255, 99, 132);
+          }
+
+          .fa-male {
+            color: rgb(75, 192, 192);
+          }
+        }
+      }
+    }
+
+    .categories {
+      .cat-list {
+        // max-width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .cat-card {
+          margin: 15px 45px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            height: 70px;
+          }
+
+          .cat-title {
+            font-weight: 500;
+            margin-top: 9px;
+          }
+
+          .count {
+            margin-top: 4px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: rgb(168, 168, 168);
+          }
+        }
+      }
+    }
+  }
+
+  & > .right {
+    height: 100%;
+    width: 70%;
+    // background-color: lightcoral;
+    padding: 30px;
+    padding-left: 0;
+
+    .top {
+      display: flex;
+
+      .left {
+        margin-right: 25px;
+
+        .footfalls {
+          padding: 20px 30px;
+          .d-flex {
+            font-size: 2rem;
+
+            i {
+              color: $primary-color;
+            }
+
+            .num {
+              margin-left: 10px;
+              font-weight: 600;
+              color: rgba(0, 0, 0, 0.6);
+            }
+          }
+        }
+
+        .emotion {
+          padding: 20px 30px;
+          .chart-container {
+            margin: -50px 0;
+          }
+        }
+      }
+    }
+
+    .products::-webkit-scrollbar {
+      display: none;
+    }
+
+    .products {
+      // height: 170px;
+      display: flex;
+      overflow-x: scroll;
+
+      .prod-card {
+        height: 140px;
+        margin-right: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > img {
+          height: 50%;
+          margin-bottom: 15px;
+        }
+
+        .d-flex {
+          img {
+            height: 15px;
+            margin-right: 5px;
+          }
+          p {
+            font-weight: 600;
+          }
+        }
+
+        .red {
+          margin-top: 4px;
+          color: #d93d3d;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .video-container {
+      height: calc(100% - 200px);
+      width: 65%;
+      background-color: #fff;
+      padding: 25px;
+      padding-top: 20px;
+
+      video {
+        height: calc(100% - 50px);
+        width: 100%;
+        margin-top: 20px;
+        background-color: #000;
+        border-radius: 10px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}

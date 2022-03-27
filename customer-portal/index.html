@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <!-- <link rel="icon" href="data:;base64,iVBORw0KGgo=" /> -->
+  <script src="js/aframe.min.js"></script>
+  <script src="js/aframe-ar.js"></script>
+
+  <script src="js/aframe-text-geometry-component.min.js"></script>
+
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+      <a-assets>
+        <a-asset-item id="exoFont" src="fonts/exoBlack.typeface.json"></a-asset-item>
+        <!-- <img id="pixels" src="images/pixels.png" /> -->
+      </a-assets>
+
+      <!-- 2D text -->
+      <a-marker type="pattern" url="data/kanji.patt">
+        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
+        <!-- <a-plane
+          color="white"
+          rotation="0 0 0"
+          position="0 -0.25 0"
+          width="3"
+          material="transparent: true; opacity: 0.90"
+        ></a-plane>
+        <a-text
+          value="$1.49"
+          font="fonts/Exo2Bold.fnt"
+          color="red"
+          rotation="-90 0 0"
+          align="center"
+          scale="2 2 2"
+        ></a-text> -->
+
+        <a-entity
+          text-geometry="value: $1.49; font: #exoFont;"
+          material="color: white; src: #pixels; repeat: 0.5 0.5;"
+          rotation="0 0 0"
+        >
+        </a-entity>
+      </a-marker>
+      <a-marker type="pattern" url="data/hiro.patt">
+        <a-entity
+          text-geometry="value: $2.99; font: #exoFont;"
+          material="color: white; src: #pixels; repeat: 0.5 0.5;"
+          rotation="0 0 0"
+        >
+        </a-entity>
+      </a-marker>
+
+      <a-marker type="pattern" url="data/letterA.patt">
+        <a-entity
+          text-geometry="value: $13.79; font: #exoFont;"
+          material="color: white; src: #pixels; repeat: 0.5 0.5;"
+          rotation="0 0 0"
+        >
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

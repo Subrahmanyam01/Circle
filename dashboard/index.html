@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body class="noselect">
+    <main>
+      <div class="left">
+        <div class="cards-list">
+          <div class="age card">
+            <p class="card-title">Age Insights</p>
+
+            <div class="chart-container" style="width: 100%">
+              <canvas id="ageChart"></canvas>
+            </div>
+          </div>
+
+          <div class="gender card">
+            <div>
+              <p class="card-title">Demographics</p>
+
+              <div class="info">
+                <div class="d-flex">
+                  <i class="fa fa-female" aria-hidden="true"></i>
+                  <p>67%</p>
+                </div>
+                <div class="d-flex">
+                  <i class="fa fa-male" aria-hidden="true"></i>
+                  <p>33%</p>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="chart-container" style="width: 200px">
+                <canvas id="genderChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div id="PC_Trigger" class="categories card">
+            <p class="card-title">Categories</p>
+
+            <div class="cat-list">
+              <div class="cat-card">
+                <img src="assets/dairy.png" alt="" />
+                <div class="cat-title">Dairy</div>
+                <div class="count">29</div>
+              </div>
+
+              <div class="cat-card">
+                <img src="assets/clothing.png" alt="" />
+                <div class="cat-title">Clothing</div>
+                <div class="count">120</div>
+              </div>
+
+              <div class="cat-card">
+                <img src="assets/fast-food.png" alt="" />
+                <div class="cat-title">Fast Food</div>
+                <div class="count">203</div>
+              </div>
+
+              <div class="cat-card">
+                <img src="assets/fruits.png" alt="" />
+                <div class="cat-title">Fruits</div>
+                <div class="count">78</div>
+              </div>
+
+              <div class="cat-card">
+                <img src="assets/meat.png" alt="" />
+                <div class="cat-title">Meat</div>
+                <div class="count">56</div>
+              </div>
+
+              <div class="cat-card">
+                <img src="assets/hygiene.png" alt="" />
+                <div class="cat-title">Hygiene</div>
+                <div class="count">203</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="top">
+          <div class="left">
+            <div class="footfalls card">
+              <p class="card-title">Footfall</p>
+              <div class="d-flex">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <p id="PC" class="num">24</p>
+              </div>
+            </div>
+
+            <div class="emotion card">
+              <p class="card-title">Emotions</p>
+              <div class="chart-container" style="width: 300px">
+                <canvas id="emotionChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="video-container card right">
+            <h2>Live stream</h2>
+            <video id="main-video" src="http://192.168.10.153:5000/video_feed" muted loop autoplay></video>
+          </div>
+        </div>
+        <div class="products card">
+          <div class="prod-card">
+            <img src="assets/foods/toast.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/down.png" alt="" />
+              <p class="price">$1.29</p>
+            </div>
+            <p class="red">5% Off</p>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/milk.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/up.png" alt="" />
+              <p class="price">$1.99</p>
+            </div>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/cabbage.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/down.png" alt="" />
+              <p class="price">$3.59</p>
+            </div>
+            <p class="red">2% Off</p>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/chicken-leg.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/down.png" alt="" />
+              <p class="price">$6.89</p>
+            </div>
+            <p class="red">7% Off</p>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/egg.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/up.png" alt="" />
+              <p class="price">$2.19</p>
+            </div>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/watermelon.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/down.png" alt="" />
+              <p class="price">$1.29</p>
+            </div>
+            <p class="red">9% Off</p>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/coriander.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/up.png" alt="" />
+              <p class="price">$0.99</p>
+            </div>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/wine.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/down.png" alt="" />
+              <p class="price">$4.39</p>
+            </div>
+            <p class="red">11% Off</p>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/apple.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/up.png" alt="" />
+              <p class="price">$3.99</p>
+            </div>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/cheese.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/up.png" alt="" />
+              <p class="price">$5.49</p>
+            </div>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/carrot.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/down.png" alt="" />
+              <p class="price">$1.29</p>
+            </div>
+            <p class="red">4% Off</p>
+          </div>
+
+          <div class="prod-card">
+            <img src="assets/foods/toast.png" alt="" />
+            <div class="d-flex">
+              <img src="assets/down.png" alt="" />
+              <p class="price">$1.59</p>
+            </div>
+            <p class="red">13% Off</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

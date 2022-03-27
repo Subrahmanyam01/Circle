@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  z-index: 10000;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+
+  height: 70px;
+  /* width: 400px; */
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 10px;
+  font-family: "Outfit", sans-serif;
+}
+
+.btn-container {
+  height: 100%;
+  display: flex;
+}
+
+.btn {
+  height: 100%;
+  /* width: 100%; */
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 0 20px;
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn:first-child {
+  margin-right: 13px;
+  min-width: 185px;
+}
+
+.btn img {
+  height: 23px;
+  margin-left: 10px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
